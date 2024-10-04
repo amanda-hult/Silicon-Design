@@ -4,208 +4,228 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silicon Design</title>
-    <link rel="stylesheet" href="styles.css">
-  <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css">
 </head>
 
 <body>
     <main>
+        <!--HEADER-->
+        <header class="header">
+            <nav class="main-navigation">
+                <!--Responsive sidebar - credit: Coding2GO, https://www.youtube.com/watch?v=U8smiWQ8Seg&t=630s-->
+                <ul class="sidebar">
+                    <li class="ham-menu" onclick="hideSidebar()">
+                        <label class="toggle-menu toggle-sidebar">
+                            <input type="checkbox">
+                                <span class="line top-line"></span>
+                                <span class="line middle-line"></span>
+                                <span class="line bottom-line"></span>
+                        </label>
+                    </li>
+                    <li><a href="#">Sign in / up</a></li>
+                    <li><a href="#app-features">Features</a></li>
+                    <li><a href="#faq-section">FAQs</a></li>
+                    <li><a href="#contact-info-section">Contact</a></li>
+                </ul>
 
-        <!-- <header>  --><!-- sticky navbar funkar ej med header -->
-        <!--Navbar-->
-        <nav class="main-navigation">
+                <div class="logo-container">
+                    <a href="#" class="logo-link"><img class="logo-image" src="/images/silicon-logo.svg" alt="Silicon logo"></a>
+                    <h1 class="s-heading">Silicon</h1>
+                    <a class="nav-link" href="#app-features">Features</a>
+                </div>
 
-            <!--credit: https://www.youtube.com/watch?v=U8smiWQ8Seg&t=630s-->
-            <ul class="sidebar">
-                <li class="ham-menu" onclick="hideSidebar()">
-                    <label class="toggle-menu toggle-sidebar">
+                <div class="dark-mode">
+                    <span class="dark-mode-label bold">Dark Mode</span>
+                    <label class="switch">
                         <input type="checkbox">
-                            <span class="line top-line"></span>
-                            <span class="line middle-line"></span>
-                            <span class="line bottom-line"></span>
+                        <span class="slider"></span>
                     </label>
-                </li>
-                <li><a href="#">Sign in / up</a></li>
-                <li><a href="#app-features">Features</a></li>
-                <li><a href="#faq-section">FAQs</a></li>
-                <li><a href="#contact-info-section">Contact</a></li>
-            </ul>
+                </div>
 
-            <div class="logo-container">
-                <a href="#" class="logo-link"><img class="logo-image" src="/images/silicon-logo.svg" alt="Silicon logo"></a>
-                <h1 class="s-heading">Silicon</h1>
-                <a class="nav-link" href="#app-features">Features</a>
-            </div>
+                <!--Toggle menu - credit: WebKitCoding https://www.youtube.com/watch?app=desktop&v=1TZjgQ0Osic-->
+                <label class="toggle-menu" onclick="showSidebar()">
+                    <input type="checkbox">
+                        <span class="line top-line"></span>
+                        <span class="line middle-line"></span>
+                        <span class="line bottom-line"></span>
+                </label>
 
+                <a id="sign-in-up" class="sign-in-btn" href="#">
+                    <i class="fa-thin fa-user"></i>
+                    <span>Sign in / up</span>
+                </a>
+            </nav>
+        </header>
 
-            <div class="dark-mode">
-                <span class="dark-mode-label">Dark Mode</span>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </label>
-            </div>
-
-            <!--credit: https://www.youtube.com/watch?app=desktop&v=1TZjgQ0Osic-->
-            <label class="toggle-menu" onclick="showSidebar()">
-                <input type="checkbox">
-                    <span class="line top-line"></span>
-                    <span class="line middle-line"></span>
-                    <span class="line bottom-line"></span>
-            </label>
-
-
-
-            <a id="sign-in-up" class="sign-in-btn" href="#">
-                <i class="fa-thin fa-user"></i>
-                <span>Sign in / up</span>
-            </a>
-        </nav>
-        <!-- </header> -->
-
-        <!--SIDA 1 FRONTPAGE-->
+        <!--HERO-->
         <section class="hero">
             <div class="frontpage">
-                
                 <h1 class="l-heading headline">Manage All Your <br> Money in One App</h1>
-                
+
                 <div class="content">
                     <p class="l-font">We offer you a new generation of the mobile banking. <br class="line-break">Save, spend & manage money in your pocket.</p>
-                    
                     <div class="market-btns">
                         <a class="btn-app" href="#"><img id="theme-image-apple" src="images/appstore.svg" alt="AppStore button"></a>
                         <a class="btn-app" href="#"><img id="theme-image-google" src="images/googleplay.svg" alt="GooglePlay button"></a>  
                     </div>
-
                     <div>
                         <a class="expand" href="#app-features"><span><i class="arrow-btn fa-regular fa-angle-down"></i></span><span class="s-font discover-more">Discover more</span></a>
-                        <!--gå till nästa section med expand-knapp-->
                         <!-- <button class="arrow-btn-l"><img src="images/arrow-icon.svg"></button> -->
-                        <!-- <p class="s-font">Discover more</p> -->
                     </div>
-                </div>
+                </div> 
 
                 <div class="app-illustration" >
                     <img class="img-back" src="images/app-on-iphone-budget.svg" alt="App on Iphone your budget">
                     <img class="img-front" src="images/app-on-iphone-transactions.svg" alt="App on Iphone your cards">
                 </div>
-                
             </div>
-
         </section>
 
-
-        <!--SIDA 2 LOGOIPSUM-->
+        <!--FEATURES-->
         <section id="app-features">
-        <div class="logoipsum">
-            <img class="ipsum logoipsum-1" src="images/logoipsum1.svg">
-            <img class="ipsum logoipsum-2" src="images/logoipsum2.svg">
-            <img class="ipsum logoipsum-3" src="images/logoipsum3.svg">
-            <img class="ipsum logoipsum-4" src="images/logoipsum4.svg">
-            <img class="ipsum logoipsum-5" src="images/logoipsum5.svg">
-            <img class="ipsum logoipsum-6" src="images/logoipsum6.svg">
-        </div>
-
-        <div class="features">
-            <img class="app-on-iphone" src="images/app-features.svg">
-            <div class="features-intro">
-                <h2 class="m-heading">App Features</h2>
-                <p class="l-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+            <div class="logos">
+                <img class="logo p-1" src="images/logoipsum1.svg">
+                <img class="logo p-1" src="images/logoipsum2.svg">
+                <img class="logo p-1" src="images/logoipsum3.svg">
+                <img class="logo p-1" src="images/logoipsum4.svg">
+                <img class="logo logo-desktop p-1" src="images/logoipsum5.svg">
+                <img class="logo logo-desktop p-1" src="images/logoipsum6.svg">
             </div>
+
+            <div class="feature-container">
+                <img class="app-on-iphone" src="images/app-features.svg">
+                <div class="features-intro">
+                    <h2 class="m-heading p-tb-1">App Features</h2>
+                    <p class="l-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+                </div>
                 <div class="feature">
-                <img src="images/payment-icon.svg" alt="Payment icon">
-                <div>
-                <h3 class="s-heading">Easy Payments</h3>
-                <p class="m-font">Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
+                    <img src="images/payment-icon.svg" alt="Payment icon">
+                    <div>
+                        <h3 class="s-heading">Easy Payments</h3>
+                        <p class="m-font">Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="feature">   
-                <img src="images/shield-icon.svg" alt="Shield icon">
-                <div>
-                <h3 class="s-heading">Data Security</h3>
-                <p class="m-font">Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
+                <div class="feature">   
+                    <img src="images/shield-icon.svg" alt="Shield icon">
+                    <div>
+                        <h3 class="s-heading">Data Security</h3>
+                        <p class="m-font">Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="feature"> 
-                <img src="images/statistics-icon.svg" alt="Statistics icon">
-                <div>
-                <h3 class="s-heading">Cost Statistics</h3>
-                <p class="m-font">Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
+                <div class="feature"> 
+                    <img src="images/statistics-icon.svg" alt="Statistics icon">
+                    <div>
+                        <h3 class="s-heading">Cost Statistics</h3>
+                        <p class="m-font">Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="feature"> 
-                <img src="images/support-icon.svg" alt="Support icon">
-                <div>
-                <h3 class="s-heading">Support 24/7</h3>
-                <p class="m-font">A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
+                <div class="feature"> 
+                    <img src="images/support-icon.svg" alt="Support icon">
+                    <div>
+                        <h3 class="s-heading">Support 24/7</h3>
+                        <p class="m-font">A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="feature">   
-                <img src="images/cashback-icon.svg" alt="Cashback icon">
-                <div>
-                <h3 class="s-heading">Regular Cashback</h3>
-                <p class="m-font">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
+                <div class="feature">   
+                    <img src="images/cashback-icon.svg" alt="Cashback icon">
+                    <div>
+                        <h3 class="s-heading">Regular Cashback</h3>
+                        <p class="m-font">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="feature">   
-                <img src="images/happy-icon.svg" alt="Happyface icon">
-                <div>
-                <h3 class="s-heading">Top Standards</h3>
-                <p class="m-font">Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
+                <div class="feature">   
+                    <img src="images/happy-icon.svg" alt="Happyface icon">
+                    <div>
+                        <h3 class="s-heading">Top Standards</h3>
+                        <p class="m-font">Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
 
-
-        <!--SIDA 3 HOW TO-->
-        <section class="description">
+        <!--HOW DOES IT WORK-->
+        <section class="how-to-section">
             <div class="container-how-to">
-                <h2 class="m-heading tbp-2">How Does It Work?</h2>
+                <h2 class="m-heading p-tb-1">How Does It Work?</h2>
 
-                <div class="sc-pics-mobile">
-                    <img class="sc app-showcase-1" src="images/sc-mobile.svg" alt="App illustration">
+                <div class="sc-pics-mobile p-tb-1">
+                    <img class="sc" src="images/sc-mobile.svg" alt="App illustration">
+                </div>
+                
+                <div class="sc-pics-tablet p-tb-1">
+                    <img class="sc-bg-tablet" src="images/iphone-bg-tablet.svg" alt="iPhone 12">
+
+                    <img class="sc" src="images/sc-2-tablet.svg" alt="App illustration">
+                    <img class="sc" src="images/sc-1-tablet.svg" alt="App illustration">
+                    <img class="sc" src="images/sc-3-tablet.svg" alt="App illustration">
                 </div>
 
-                <div class="sc-pics-tablet">
-                    <img class="sc-bg" src="images/iphone-bg-tablet.svg" alt="iPhone 12">
-
-                    <img class="sc app-showcase-2" src="images/sc-2-tablet.svg" alt="App illustration">
-                    <img class="sc app-showcase-6" src="images/sc-1-tablet.svg" alt="App illustration">
-                    <img class="sc app-showcase-3" src="images/sc-3-tablet.svg" alt="App illustration">
+                <div class="mobile-text">
+                    <h3 class="s-heading mobile-text">Transfer to people from your contact list</h3>
+                    <p class="m-font mobile-text">Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
                 </div>
 
-                <div class="sc-pics-desktop">
-                    <img class="sc-bg" src="images/iphone-bg-desktop.svg" alt="iPhone 12">
+                <!--Carousel - credit: Aybüke Ceylan, https://codepen.io/aybukeceylan/pen/RwrRPoO -->
+                <div class="sc-pics-desktop p-tb-1">
+                    <div class="carousel">
+                        <input type="radio" name="slider" id="sc-1" checked>
+                        <input type="radio" name="slider" id="sc-2">
+                        <input type="radio" name="slider" id="sc-3">
 
-                    <img class="sc app-showcase-2" src="images/sc-2-desktop.svg" alt="App illustration">
-                    <img class="sc app-showcase-6" src="images/sc-1-desktop.svg" alt="App illustration">
-                    <img class="sc app-showcase-3" src="images/sc-3-desktop.svg" alt="App illustration">
+                        <div class="slides">
+                            <img src="images/iphone-bg-desktop.svg" alt="iPhone 12">
+                            
+                            <label class="card" for="sc-1" id="img-1">
+                                <img src="images/sc-1-desktop.svg" alt="App illustration">
+                            </label>
+                            
+                            <label class="card" for="sc-2" id="img-2">
+                                <img src="images/sc-2-desktop.svg" alt="App illustration">
+                            </label>
+
+                            <label class="card" for="sc-3" id="img-3">
+                                <img src="images/sc-3-desktop.svg" alt="App illustration">
+                            </label>
+
+                        </div>
+
+                        <div class="desktop-text">
+                                <div class="info-area" id="text-slide">
+                                    <div>
+                                        <h3 class="sm-heading">Latest transaction history</h3>
+                                        <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
+                                    </div>
+                    
+                                    <div>
+                                        <h3 class="sm-heading">Transfer to people from your contact list</h3>
+                                        <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+                                    </div>
+                    
+                                    <div>
+                                        <h3 class="sm-heading">See your transaction history</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente sit eligendi placeat ullam perferendis distinctio ipsa veritatis incidunt ea!</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                 </div>
-
-
-
-
-                <h3 class="s-heading mobile-text">Transfer to people from your contact list</h3>
-                <h3 class="sm-heading desktop-text">Latest transaction history</h3>
-                <p class="m-font mobile-text">Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
-                <p class="m-font desktop-text">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
             </div>
         </section>
-
 
         <!--APP INFO-->
         <section>
-            <div= class="app-info">
+            <div= class="app-info p-5">
                 <div class="info-list">
-                    <h3 class="m-heading">Make your money <br>transfer simple and clear</h3>
+                    <h2 class="m-heading">Make your money <br>transfer simple and clear</h2>
                     <ul>
                         <li class="m-font"><i class="fa-sharp fa-regular fa-circle-check"></i> Banking transactions are free for you</li>
                         <li class="m-font"><i class="fa-sharp fa-regular fa-circle-check"></i> No monthly cash commission</li>
@@ -218,7 +238,7 @@
                 <img src="images/app-conversations.svg">
 
                 <div class="payment-details">
-                    <h3 class="m-heading">Receive payment from <br>international bank details</h3>
+                    <h2 class="m-heading">Receive payment from <br>international bank details</h2>
                     <div class="payment-info">
                         <img src="images/payment-icon.svg">
                         <p class="m-font">Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
@@ -232,14 +252,12 @@
             </div>
         </section>
 
-
-        <!--RECENSIONER-->
-
-        <section class="reviews">
-            <div class="review-container">
+        <!--REVIEWS-->
+        <section class="review-section">
+            <div class="review-container p-tb-5">
                 <h2 class="xl-heading">Clients are Loving Our App</h2>
-                <div class="review">
-                    <p class="quote"><i class="fa-sharp fa-solid fa-quote-left"></i></p>
+                <div class="review-card">
+                    <p class="quote-mark"><i class="fa-sharp fa-solid fa-quote-left"></i></p>
                     <div class="stars">
                         <i class="fa-solid fa-star-sharp yellow-star"></i>
                         <i class="fa-solid fa-star-sharp yellow-star"></i>
@@ -250,12 +268,12 @@
                     <p class="m-font">Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>          
                     <div class="reviewer">
                         <img src="images/profile-picture-1.svg">
-                        <p class="bold">Fannie Summers<br><span class="s-font job-title">Designer</span></p>
+                        <p class="x-bold">Fannie Summers<br><span class="s-font">Designer</span></p>
                     </div>
                 </div>
 
-                <div class="review">
-                    <p class="quote"><i class="fa-sharp fa-solid fa-quote-left"></i></p>
+                <div class="review-card">
+                    <p class="quote-mark"><i class="fa-sharp fa-solid fa-quote-left"></i></p>
                     <div class="stars">
                         <i class="fa-solid fa-star-sharp yellow-star"></i>
                         <i class="fa-solid fa-star-sharp yellow-star"></i>
@@ -266,26 +284,23 @@
                     <p class="m-font">Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>                
                     <div class="reviewer">
                         <img src="images/profile-picture-2.svg">
-                        <p class="bold">Albert Flores<br><span class="s-font job-title">Developer</span></p>
+                        <p class="x-bold">Albert Flores<br><span class="s-font">Developer</span></p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--SIDA 4 FAQS-->
-
+        <!--FAQS-->
         <section id="faq-section">
             <div class="faqs">
-
-                <div class="faq-intro">
-                    <h3 class="m-heading">Any questions?<br>Check out the FAQs</h3>
+                <div class="faq-intro p-tb-1">
+                    <h2 class="m-heading p-tb-1">Any questions?<br>Check out the FAQs</h2>
                     <p class="l-font">Still have unanswered questions and need to get in touch?</p>
                 </div>
 
-                <div class="faq-container">
-
+                <div class="faq-container m-tb-1">
                     <div class="question">
-                        <h3 class="m-font">Is any of my personal information stored in the App?</h3>
+                        <h3 class="m-font bold">Is any of my personal information stored in the App?</h3>
                         <span class="open active"><i class="arrow-down fa-regular fa-angle-down"></i></span>
                         <span class="close"><i class="arrow-up fa-regular fa-angle-down fa-flip-vertical"></i></span>
                     </div>
@@ -294,10 +309,9 @@
                         <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
                     </div>
 
-
                     <hr>
                     <div class="question">
-                        <h3 class="m-font">What formats can I download my transaction history in?</h3>
+                        <h3 class="m-font bold">What formats can I download my transaction history in?</h3>
                         <span class="open active"><i class="arrow-down fa-regular fa-angle-down"></i></span>
                         <span class="close"><i class="arrow-up fa-regular fa-angle-down fa-flip-vertical"></i></span>
                     </div>
@@ -305,10 +319,9 @@
                         <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
                     </div>
 
-
                     <hr>
                     <div class="question">
-                        <h3 class="m-font">Can I schedule future transfers?</h3>
+                        <h3 class="m-font bold">Can I schedule future transfers?</h3>
                         <span class="open active"><i class="arrow-down fa-regular fa-angle-down"></i></span>
                         <span class="close"><i class="arrow-up fa-regular fa-angle-down fa-flip-vertical"></i></span>
                     </div>
@@ -318,7 +331,7 @@
 
                     <hr>
                     <div class="question">
-                        <h3 class="m-font">When can I use Banking App services?</h3>
+                        <h3 class="m-font bold">When can I use Banking App services?</h3>
                         <span class="open active"><i class="arrow-down fa-regular fa-angle-down"></i></span>
                         <span class="close"><i class="arrow-up fa-regular fa-angle-down fa-flip-vertical"></i></span>
                     </div>
@@ -328,7 +341,7 @@
 
                     <hr>
                     <div class="question">
-                        <h3 class="m-font">Can I create my own password that is easy for me to remember?</h3>
+                        <h3 class="m-font bold">Can I create my own password that is easy for me to remember?</h3>
                         <span class="open active"><i class="arrow-down fa-regular fa-angle-down"></i></span>
                         <span class="close"><i class="arrow-up fa-regular fa-angle-down fa-flip-vertical"></i></span>
                     </div>
@@ -338,7 +351,7 @@
 
                     <hr>
                     <div class="question">
-                        <h3 class="m-font">What happens if I forget or lose my password?</h3>
+                        <h3 class="m-font bold">What happens if I forget or lose my password?</h3>
                         <span class="open active"><i class="arrow-down fa-regular fa-angle-down"></i></span>
                         <span class="close"><i class="arrow-up fa-regular fa-angle-down fa-flip-vertical"></i></span>
                     </div>
@@ -347,12 +360,12 @@
                     </div>
                 </div>
             
-                <div class="tp-1">
+                <div class="btn-mobile">
                     <button class="contact-btn">Contact us now</button>
                 </div>
                 
                 <div id="contact-info-section">
-                    <div class="contact-info">
+                    <div class="contact-info p-tb-1">
                         <div class="contact-phone">
                             <a href="#" class="phone-icon">
                                 <i class="fa-solid fa-phone-volume fa-xl fa-hover-hidden"></i>
@@ -372,69 +385,92 @@
                         </div>
                     </div>
                 </div>
-
-        
-                
-
-
             </div>
-
-
-
         </section>
         </main>
 
-        <!--SUBSCRIBE-->
-
+        <!--SUBSCRIPTION-->
         <div class="subscribe-section">
             <div class="subscribe">
                 <img src="images/notification-icon.svg" alt="Notification icon">
-                <h4>Subscribe to our newsletter<span class="extended-info"> to stay informed about latest updates</span></h4>
+                <h3 class="s-heading">Subscribe to our newsletter<span class="extended-info"> to stay informed about latest updates</span></h3>
             </div>
 
-            <form class="email-input">
-                <label for="email"></label>
-                <input class="form-input" type="email" id="email" placeholder="     &#xf003;     Your email" style="font-family:Manrope, FontAwesome;">
-                <input type="submit" value="Subscribe">
-            </form>
-        </div> 
-
-
-
-        <!--FOOTER-->
+            <div>
+                <form class="email-input">
+                    <label for="email"></label>
+                    <input class="form-input" type="email" id="email" placeholder="     &#xf003;     Your email" style="font-family:Manrope, FontAwesome;">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
     </main>
+
+    <!--FOOTER-->
     <footer>
         <p class="s-font">&copy; 2024 Silicon. All rights reserved. Credit MadrasThemes</p>
     </footer>
 
-
-    <!--DARK MODE JAVASCRIPT - CREDIT CHATGPT-->
-    <!--lägg till prefered color theme-->
     <script>
-        // Välj checkboxen för mörkt läge
+        // Dark mode - credit: ChatGPT
         const darkModeSwitch = document.querySelector('.switch input[type="checkbox"]');
+        const darkModeLabel = document.querySelector('.dark-mode-label');
         const themeImageApple = document.getElementById('theme-image-apple');
         const themeImageGoogle = document.getElementById('theme-image-google');
-      
-        // Funktion för att växla mörkt läge
-        function toggleDarkMode(event) {
-          if (event.target.checked) {
-            document.body.classList.add('dark-theme'); // Lägg till mörkt läge
-            themeImageApple.src = '/images/appstore-dark.svg'; // Byt till mörkt läge bild
+
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            darkModeSwitch.checked = true;
+            themeImageApple.src = '/images/appstore-dark.svg';
             themeImageGoogle.src = '/images/googleplay-dark.svg';
+        } else {
+            document.body.classList.remove('dark-theme');
+            darkModeSwitch.checked = false;
+            themeImageApple.src = '/images/appstore.svg';
+            themeImageGoogle.src = '/images/googleplay.svg';
+        }
+      
+        function toggleDarkMode(event) {
+          if (darkModeSwitch.checked) {
+            document.body.classList.add('dark-theme');
+            themeImageApple.src = '/images/appstore-dark.svg';
+            themeImageGoogle.src = '/images/googleplay-dark.svg';
+            localStorage.setItem('theme', 'dark');
           } else {
-            document.body.classList.remove('dark-theme'); // Ta bort mörkt läge
-            themeImageApple.src = '/images/appstore.svg'; // Byt tillbaka till ljus läge bild
+            document.body.classList.remove('dark-theme');
+            themeImageApple.src = '/images/appstore.svg';
             themeImageGoogle.src = '/images/googleplay.svg'; 
+            localStorage.setItem('theme', 'light');
           }
         }
       
-        // Lägg till eventlyssnare på checkboxen
         darkModeSwitch.addEventListener('change', toggleDarkMode);
+        darkModeLabel.addEventListener('click', function() {
+            darkModeSwitch.checked = !darkModeSwitch.checked;
+            toggleDarkMode();
+        });
+
+
+        // Open / Close sidebar - credit: Coding2GO, https://www.youtube.com/watch?v=U8smiWQ8Seg&t=630s
+        const sidebarLinks = document.querySelectorAll('.sidebar a');
+        const sidebar = document.querySelector('.sidebar')
+
+        function showSidebar() {
+            sidebar.classList.add('open');
+        }
+
+        function hideSidebar() {
+            sidebar.classList.remove('open');
+        }
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', hideSidebar);
+        });
 
         
-
-        // question section - credit: https://www.youtube.com/watch?v=PgEdW5ea2so
+        // FAQ-section - credit: GTCoding, https://www.youtube.com/watch?v=PgEdW5ea2so
         const faqHeaders = document.querySelectorAll(".faq-container .question");
 
         faqHeaders.forEach((header, i) => {
@@ -454,28 +490,6 @@
                 }
             })
         })
-
-
-        // open / close sidebar //
-        // credit: https://www.youtube.com/watch?v=U8smiWQ8Seg&t=630s //
-
-        // stäng sidebar när a-länk markeras - credit: chatGPT//
-        const sidebarLinks = document.querySelectorAll('.sidebar a');
-        const sidebar = document.querySelector('.sidebar')
-
-        function showSidebar() {
-            sidebar.classList.add('open');
-        }
-
-        function hideSidebar() {
-            sidebar.classList.remove('open');
-        }
-
-        sidebarLinks.forEach(link => {
-            link.addEventListener('click', hideSidebar);
-        });
-
     </script>
-
 </body>
 </html>

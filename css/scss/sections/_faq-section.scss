@@ -1,0 +1,153 @@
+.faqs {
+    padding: 1rem;
+
+    @include desktop {
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 1320px;
+        margin: 0 auto;
+        @include grid(2, 0);
+    }
+}
+
+.faq-intro {
+    text-align: center;
+
+    @include desktop {
+        text-align: left;
+
+        h3 {
+            font-size: 2rem;
+        }
+    }
+}
+
+.faq-container {
+    border: 1px solid var(--detail-color1);
+    border-radius: 8px;
+    display: grid;
+    overflow: hidden;
+
+    hr {
+        border: 1px solid var(--detail-color1);
+    }
+
+    @include tablet {
+        overflow: visible;
+        gap: .5rem;
+        border: none;
+        hr {
+            display: none;
+        }
+    }
+
+    @include desktop {
+        grid-column: 2 / -1;
+        grid-row: 1 / -1;
+    }
+}
+
+.question {
+    background-color: var(--bg-color-quaternary);
+    position: relative;
+    cursor: pointer;
+    padding: 1.5rem;
+    @include flex;
+
+    h3 {
+        width: 85%;
+    }
+
+    @include tablet {
+        border: 1px solid var(--bg-color-primary);
+        border-radius: 8px;
+        box-shadow: 5px 5px 10px var(--detail-color1);
+    }
+}
+
+.answer {
+    background-color: var(--bg-color-quaternary);
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: .2s ease;
+    text-align: left;
+
+    p {
+        padding-bottom: 1rem;
+    }
+
+    @include tablet {
+        border-left: 1px solid var(--bg-color-primary);
+        border-right: 1px solid var(--bg-color-tertiary);
+        border-bottom: 1px solid var(--bg-color-tertiary);
+        border-radius: 8px;
+    }
+}
+
+.answer.active {
+    max-height: 1000px;
+}
+
+.contact-info {
+    display: none;
+
+    @include tablet {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+    
+        /* Hover effect - credit: https://codepen.io/scottlittlewood/pen/YNmvZj */
+        * > .fa-hover-show,
+        *:hover > .fa-hover-hidden {
+        display: none;
+        }
+      
+        *:hover > .fa-hover-show {
+        display: inline-block;
+        }
+    }
+
+    @include desktop {
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+}
+
+.contact-phone, .contact-msg {
+    display: none;
+    border: 1px solid var(--detail-color1);
+    border-radius: 8px;
+    text-align: left;
+    padding: 1.5rem;
+    align-items: center;
+
+    a:hover {
+        font-weight: 600;
+        transition: .2s;
+    }
+
+    @include tablet {
+        display: grid;
+        height: 165px;
+        width: 340px;
+    }
+
+    @include desktop {
+        height: 150px;
+        width: 200px;
+    }
+}
+
+.contact-phone {
+    a, i {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+}
+
+.contact-msg {
+    a, i {
+        color: #22c55e;
+        text-decoration: none;
+    }
+}

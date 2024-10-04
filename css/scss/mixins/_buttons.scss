@@ -1,0 +1,28 @@
+@mixin button-color($bg-color, $text-color, $hover-bg-color, $hover-text-color, $active-bg-color, $active-text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+
+    &:hover {
+        background-color: $hover-bg-color;
+        color: $hover-text-color;
+    }
+
+    &:active {
+        background-color: $active-bg-color;
+        color: $active-text-color;
+    }
+}
+
+@mixin btn {
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        text-decoration: none;
+        transition: .2s;
+    }
+}
+
+

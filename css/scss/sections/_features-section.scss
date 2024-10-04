@@ -1,0 +1,97 @@
+.logos {
+    display: none;
+    width: 100%;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include tablet {
+        display: flex;
+        max-width: 720px;
+    }
+
+    @include desktop {
+        max-width: 1320px;
+        padding-top: 5rem;
+    }
+}
+
+.logo {
+    height: 6.25rem;
+    width: 10rem;
+    border: 1px solid var(--detail-color1);
+    border-radius: 7px;
+
+    @include desktop {
+        display: flex;
+        width: 12.2rem;
+    }
+}
+
+.logo-desktop {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+.feature-container {
+    display: grid;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+
+    @include tablet {
+        padding: 2.5rem 2rem 5rem 2rem;
+        @include grid(2, 2rem);
+    }
+
+    @include desktop {
+        max-width: 1320px;
+        padding-top: 7rem;
+        grid-template-rows: repeat(4, 1fr);
+        @include grid(3, 2rem);
+    }
+}
+
+.app-on-iphone {
+    display: none;
+
+    @include desktop {
+        display: block;
+        padding-right: 10rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+    }
+}
+
+.features-intro {
+    @include tablet {
+        grid-column: 1 / -1;
+
+        h2 {
+            font-size: 2.2rem;
+        }
+    }
+
+    @include desktop {
+        grid-column: 2 / -1;
+        text-align: left;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    gap: 1rem;
+    text-align: left;
+    min-height: 6rem;
+}

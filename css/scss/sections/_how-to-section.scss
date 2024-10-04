@@ -1,0 +1,153 @@
+.how-to-section {
+    background-color: var(--bg-color-secondary);
+}
+
+.container-how-to {
+    padding: 3.5rem 1rem;
+    text-align: center;
+
+    h3 {
+        padding: 1.5rem 0 .5rem 0;
+    }
+
+    @include tablet {
+        padding: 3rem 5rem;
+
+        h2 {
+            font-size: 2rem;
+            @include desktop {
+                font-size: 2.5rem;
+                line-height: 250%;
+            }
+        }
+        p {
+            padding: 0 5rem;
+            @include desktop {
+                padding: 0 15rem;
+            }
+        }
+    }
+
+    @include desktop {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+}
+
+.sc-pics-tablet, .sc-pics-desktop {
+    display: none;
+}
+
+.sc-pics-mobile {
+    @include tablet {
+        display: none;
+    }
+}
+
+.sc-pics-tablet {
+    @include tablet {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+.sc-bg-tablet {
+    @include tablet {
+        position: absolute;
+        z-index: 5;
+    }
+}
+
+.sc {
+    @include tablet {
+        display: flex;
+        z-index: 10;
+    }
+}
+ 
+.sc-pics-mobile, .sc-pics-tablet, .mobile-text {
+    @include desktop {
+        display: none;
+    }
+}
+
+.sc-pics-desktop {
+    @include desktop {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+
+    input[type=radio] {
+            @include input-opacity;
+    }
+}
+
+.card {
+    cursor: pointer;
+    width: 60%;
+    margin: auto;
+    transition: transform .4s ease;
+    @include position(absolute, auto, 0, auto, 0);
+}
+
+.slides {
+    position: relative;
+}
+
+#sc-1:checked ~ .slides #img-3, 
+#sc-2:checked ~ .slides #img-1, 
+#sc-3:checked ~ .slides #img-2 {
+    transform: translateX(-100%);
+    z-index: 0;
+    opacity: .8;
+}
+
+#sc-1:checked ~ .slides #img-2, 
+#sc-2:checked ~ .slides #img-3, 
+#sc-3:checked ~ .slides #img-1 {
+    transform: translateX(100%);
+    z-index: 0;
+    opacity: .8;
+}
+
+#sc-1:checked ~ .slides #img-1, 
+#sc-2:checked ~ .slides #img-2, 
+#sc-3:checked ~ .slides #img-3 {
+    transform: translateX(0);
+    z-index: 1;
+    opacity: 1;
+}
+
+.desktop-text {
+    min-width: 1320px;
+    align-self: center;
+    height: 8rem;
+    overflow: hidden;
+}
+
+.info-area {
+    transition: transform .4s ease-in-out;
+}
+
+#sc-2:checked ~ .desktop-text #text-slide {
+    transform: translateY(0px);
+}
+
+#sc-2:checked ~ .desktop-text #text-slide {
+    transform: translateY(-120px);
+}
+
+#sc-3:checked ~ .desktop-text #text-slide {
+    transform: translateY(-240px);
+}

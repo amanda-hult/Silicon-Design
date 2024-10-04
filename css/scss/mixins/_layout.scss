@@ -1,0 +1,24 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+@mixin input-opacity {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

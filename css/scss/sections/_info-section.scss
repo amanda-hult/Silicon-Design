@@ -1,0 +1,46 @@
+.app-info {
+    display: none;
+
+    @include desktop {
+        max-width: 1320px;
+        margin: 0 auto;
+        align-items: center;
+        @include grid(2, 0);
+    }
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 10px;
+
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+    .fa-circle-check {
+        color: var(--accent-color);
+    } 
+}
+
+.payment-details {
+    grid-template-rows: repeat(3, 1fr);
+    @include grid(2, 2rem);
+
+    h2 {
+        grid-column: 1 / -1;
+        align-content: end;
+    }
+}
+
+.payment-info {
+    display: grid;
+    gap: 1rem;
+}

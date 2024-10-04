@@ -1,0 +1,143 @@
+.hero {
+    background: radial-gradient(
+        at bottom,
+        rgb(99, 102, 241, 0.1) 0%,
+        rgb(218, 70, 239, 0.05) 42%,
+        rgb(241, 244, 253, 0.07) 83%
+        );
+    }
+
+.frontpage {
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    padding: 0 1rem;
+
+    @include tablet {
+        max-width: 1100px;
+        padding: 2rem 2rem 0 2rem;
+        grid-template-areas: "headline headline"
+                             "content app-illustration";
+        @include grid(2, 2rem);
+    }
+
+    @include desktop {
+        max-width: 1320px;
+        grid-template-areas: "headline app-illustration"
+                            "content app-illustration";
+        padding-top: 6rem;
+        }
+} 
+
+.headline {
+    @include tablet {
+        grid-area: headline;
+        font-size: 2.8rem;
+        line-height: 130%
+    }
+
+    @include desktop {
+        font-size: 3.4rem;
+        text-align: left;
+        margin-top: 2rem;
+    }
+}
+
+.content {
+    display: grid;
+    gap: 2.5rem;
+    padding-bottom: 2rem;
+
+    @include tablet {
+        grid-area: content;
+        text-align: left;
+        padding-top: 5rem;
+    }
+
+    @include desktop {
+        padding-top: 0;
+    }
+}
+
+.line-break {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.market-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include tablet {
+        flex-direction: row;
+        margin-right: 2rem;
+    }
+}
+
+.expand {
+    text-decoration: none;
+    gap: 1rem;
+    justify-content: center;
+
+    @include flex;
+    @include tablet {
+        justify-content: flex-start;
+    }
+
+    @include desktop {
+        margin-top: 10rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.discover-more {
+    color: var(--font-color-primary);
+    &:hover {
+        color: var(--accent-color);
+        transition: .2s ease;
+        font-size: .9rem;
+    }
+}
+
+.app-illustration {
+    grid-area: app-illustration;
+    display: none;
+
+    @include tablet {
+        display: block;
+        position: relative;
+    }
+}
+
+.img-back {
+    @include tablet {
+        z-index: -10;
+        width: 70%;
+        height: 80%;
+        @include position(absolute, auto, 120px, 0, auto);
+    }
+
+    @include desktop {
+        right: 230px;
+        width: auto;
+        height: 80%;
+    }
+}
+
+.img-front {
+    @include tablet {
+        z-index: -5;
+        width: 70%;
+        height: 100%;
+        @include position(absolute, auto, 0, 0, auto);
+    }
+
+    @include desktop {
+        width: auto;
+    }
+}

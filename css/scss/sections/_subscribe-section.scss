@@ -1,0 +1,82 @@
+.subscribe-section {
+    background-color: var(--bg-color-secondary);
+    padding: 2rem 1rem;
+    margin: 0 0.75rem;
+    border-radius: 7px;
+    display: grid;
+    align-items: center;
+    gap: 2rem;
+    justify-items: center;
+
+    @include tablet {
+        @include grid(2, 0);
+    }
+
+    @include desktop {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+}
+
+.subscribe {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    gap: 1rem;
+
+    @include flex;
+
+    @include tablet {
+        gap: 2rem;
+    }
+}
+
+.extended-info {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+.email-input {
+    display: flex;
+    justify-content: center;
+}
+
+.form-input {
+    padding: .6rem;
+    font-size: 1rem;
+    outline: var(--detail-color3);
+}
+
+input[type=email] {
+    color: var(--detail-color3);
+    border: .5px solid var(--detail-color1);
+    border-radius: 7px 0 0 7px;
+
+    &:focus {
+        background-color: hsl(from var(--accent-color) h s calc(l + 32));
+        border-color: var(--accent-color);
+        border-right-color: transparent;
+        color: black;
+    }
+
+    @include desktop {
+        width: 19rem;
+    }
+}
+
+input[type=submit] {
+    border-radius: 0 7px 7px 0;
+    padding: 1rem;
+    @include btn;
+    @include button-color(var(--accent-color), #fff, hsl(from var(--accent-color) h s calc(l + 2)), #fff, hsl(from var(--accent-color) h s calc(l - 2)), #fff);
+    
+    @include desktop {
+    width: 6rem;
+    }
+}
+
+::placeholder {
+    color: var(--detail-color3);
+}

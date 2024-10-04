@@ -1,0 +1,137 @@
+.sign-in-btn {
+    border-radius: 5px;
+    justify-content: center;
+    gap: .75rem;
+    padding: 10px 25px;
+    @include flex;
+    @include button-color(var(--accent-color), #fff, hsl(from var(--accent-color) h s calc(l + 3)), #fff, hsl(from var(--accent-color) h s calc(l - 3)), #fff);
+    @include btn;
+}
+
+.sign-in-btn:active {
+    transition: none;
+}
+
+#sign-in-up {
+    display: none;
+
+    @include desktop {
+        display: block;
+        padding-left: 2rem;
+    }
+}
+
+.btn-app {
+    border-radius: 8px;
+    display: flex;
+    padding: .5rem 1rem;
+    justify-content: center;
+    @include btn;
+    @include button-color(var(--btn-color), #fff, var(--detail-color4), #fff, var(--btn-color), #fff);
+}
+
+#theme-image-apple, 
+#theme-image-google {
+    max-width: 100%;
+    height: auto; 
+}
+
+.arrow-btn, .arrow-down, .arrow-up {
+    border-radius: 100%;
+    @include btn;
+}
+
+.arrow-btn {
+    height: 45px;
+    width: 45px;
+    background-color: var(--bg-color-quaternary);
+    color: var(--detail-color4);
+    display: flex;
+    padding: 15px;
+    box-shadow: 0 0 10px var(--detail-color1);
+
+    &:hover {
+        background-color: var(--accent-color);
+        color: #fff;
+        box-shadow: 0 0 10px -3px var(--accent-color);
+    }
+
+    &:active {
+        background-color: hsl(from var(--accent-color) h s calc(l - 3));
+        transition: none;
+    }
+}
+
+.learn-more-btn {
+    height: 45px;
+    width: 160px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 5px;
+    padding: .7rem 1.5rem;
+    font-size: .9rem;
+    @include btn;
+    @include button-color(var(--accent-color), #fff, hsl(from var(--accent-color) h s calc(l + 3)), #fff, hsl(from var(--accent-color) h s calc(l - 3)), #fff);
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        font-size: .95rem;
+    }
+    &:active {
+        transition: none;
+    }
+
+    span {
+        padding-left: 10px;
+    }
+}
+
+.arrow-down, .arrow-up {
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    padding: 10px;
+}
+
+.arrow-down {
+    background-color: var(--bg-color-secondary);
+}
+
+.arrow-up {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 -5px 20px -3px var(--accent-color);
+}
+
+.question .open,
+.question .close {
+    padding: 0 2rem;
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: .3s;
+    @include position(absolute, auto, 0, auto, auto);
+}
+
+.question .open.active,
+.question .close.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-mobile {
+    padding: 2rem 0;
+
+    .contact-btn {
+        padding: 1rem 1.5rem;
+        border-radius: 6px;
+        display: block;
+        margin: 0 auto;
+        @include btn;
+        @include button-color(var(--accent-color), #fff, hsl(from var(--accent-color) h s calc(l + 3)), #fff, hsl(from var(--accent-color) h s calc(l - 3)), #fff);
+    }
+
+    @include tablet {
+        display: none;
+    }
+}

@@ -1,0 +1,52 @@
+.review-section {
+    display: none;
+
+    @include desktop {
+        display: block;
+        background-color: var(--bg-color-secondary);
+    }
+}
+
+.review-container {
+    margin: 0 auto;
+    max-width: 1320px;
+    @include grid(3, 1.5rem);    
+}
+
+.review-card {
+    background-color: var(--bg-color-quaternary);
+    border-radius: 6px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.quote-mark {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    @include position(absolute, -25px, auto, auto, 25px);
+    @include flex;
+}
+
+.reviewer {
+    gap: 1.5rem;
+    @include flex;
+
+    span {
+        color: var(--detail-color3);
+    }
+}
+
+.yellow-star {
+    color: #ffba08;
+}
+
+.star {
+    color: var(--detail-color3);
+}
