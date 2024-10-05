@@ -6,6 +6,7 @@
         max-width: 1320px;
         margin: 0 auto;
         @include grid(2, 0);
+        position: relative;
     }
 }
 
@@ -79,7 +80,6 @@
     @include tablet {
         border-left: 1px solid var(--bg-color-primary);
         border-right: 1px solid var(--bg-color-tertiary);
-        border-bottom: 1px solid var(--bg-color-tertiary);
         border-radius: 8px;
     }
 }
@@ -108,8 +108,10 @@
     }
 
     @include desktop {
-        justify-content: flex-start;
         gap: 1rem;
+        position: absolute;
+        left: 1rem;
+        top: 12rem;   
     }
 }
 
