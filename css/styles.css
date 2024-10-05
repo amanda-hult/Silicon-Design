@@ -682,8 +682,10 @@ body {
   .contact-info {
     gap: 1rem;
     position: absolute;
-    left: 1rem;
     top: 12rem;
+    right: auto;
+    bottom: auto;
+    left: 1rem;
   }
 }
 

@@ -109,9 +109,7 @@
 
     @include desktop {
         gap: 1rem;
-        position: absolute;
-        left: 1rem;
-        top: 12rem;   
+        @include position(absolute, 12rem, auto, auto, 1rem); 
     }
 }
 
